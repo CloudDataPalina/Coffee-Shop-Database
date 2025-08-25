@@ -100,10 +100,13 @@ Coffee-Shop-Database/
 4. Создайте представления: [`src/views.sql`](../src/views.sql).  
    Если `product_info_m_view` создано с `WITH NO DATA`, выполните:
 
-
+-   ```
+-   REFRESH MATERIALIZED VIEW public.product_info_m_view;
+-   ```
 +   ```sql
 +   REFRESH MATERIALIZED VIEW public.product_info_m_view;
 +   ```
+
 
 5. Быстрая проверка:
 
