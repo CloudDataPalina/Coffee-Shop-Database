@@ -110,7 +110,7 @@ Validation screenshots:
    SELECT * FROM public.staff_locations_view LIMIT 10;
    SELECT * FROM public.product_info_m_view  LIMIT 10;
    ```
-6. **Sample queries:** [`src/demo_queries.sql`](../src/demo_queries.sql)
+6. **Sample queries:** [`src/demo_queries.sql`](src/demo_queries.sql)
 *(top products, sales by outlet, etc.).*
 
 ---
@@ -119,32 +119,32 @@ Validation screenshots:
 
 **MySQL 🐬**
 
-- **Quick path:** import [`data/staff_locations_view.csv`](../data/staff_locations_view.csv)
+- **Quick path:** import [`data/staff_locations_view.csv`](data/staff_locations_view.csv)
   into table `staff_locations` *(phpMyAdmin → Import)*.
 - **Alternative:** run the ready-made dump
-  [`output/mysql_staff_locations.sql`](../output/mysql_staff_locations.sql).
+  [`output/mysql_staff_locations.sql`](output/mysql_staff_locations.sql).
 
 Screenshots:
 [`05_mysql_staff_locations_table.png`](images/05_mysql_staff_locations_table.png) •
-[`06_mysql_product_info_table.png`](../images/06_mysql_product_info_table.png)
+[`06_mysql_product_info_table.png`](images/06_mysql_product_info_table.png)
 
 **IBM Db2 on Cloud 🟦**
 
 - **Load Data** → source **My Computer** → file
-  [`data/staff_locations_view.csv`](../data/staff_locations_view.csv).
+  [`data/staff_locations_view.csv`](data/staff_locations_view.csv).
   Target: new table `STAFF_LOCATIONS`.
   Proof:
-  [`07_db2_load_success.png`](../images/07_db2_load_success.png) •
-  [`08_db2_staff_locations_table.png`](../images/08_db2_staff_locations_table.png)
+  [`07_db2_load_success.png`](images/07_db2_load_success.png) •
+  [`08_db2_staff_locations_table.png`](images/08_db2_staff_locations_table.png)
 - *(Optional)* pre-create the table with:
-  [`output/db2_staff_locations_ddl.sql`](../output/db2_staff_locations_ddl.sql).
+  [`output/db2_staff_locations_ddl.sql`](output/db2_staff_locations_ddl.sql).
 
 ---
 
 ### 💾 4) How `data/*.csv` were produced
 
-- [`staff_locations_view.csv`](../data/staff_locations_view.csv) — `SELECT` from `staff_locations_view`.
-- [`product_info_m-view.csv`](../data/product_info_m-view.csv) — export from `product_info_m_view`
+- [`staff_locations_view.csv`](data/staff_locations_view.csv) — `SELECT` from `staff_locations_view`.
+- [`product_info_m-view.csv`](data/product_info_m-view.csv) — export from `product_info_m_view`
   *(after `REFRESH MATERIALIZED VIEW`)*.
 
 The `data/` folder contains import-ready CSVs so anyone can quickly repeat the MySQL/Db2 steps.
@@ -153,14 +153,14 @@ The `data/` folder contains import-ready CSVs so anyone can quickly repeat the M
 
 ### 🖼️ 5) Screenshot Navigator
 
-- [`01_dataset_overview.png`](../images/01_dataset_overview.png) — overview of source tables/fields  
-- [`02_erd_relationships.png`](../images/02_erd_relationships.png) — ERD relationships  
-- [`03_postgresql_staff_locations_view.png`](../images/03_postgresql_staff_locations_view.png) — PostgreSQL: `staff_locations_view`  
-- [`04_postgresql_product_info_m_view.png`](../images/04_postgresql_product_info_m_view.png) — PostgreSQL: `product_info_m_view` (materialized)  
-- [`05_mysql_staff_locations_table.png`](../images/05_mysql_staff_locations_table.png) — MySQL: imported `staff_locations`  
-- [`06_mysql_product_info_table.png`](../images/06_mysql_product_info_table.png) — MySQL: `product_info_m_view` CSV preview  
-- [`07_db2_load_success.png`](../images/07_db2_load_success.png) — IBM Db2: successful **Load Data**  
-- [`08_db2_staff_locations_table.png`](../images/08_db2_staff_locations_table.png) — IBM Db2: `STAFF_LOCATIONS` table
+- [`01_dataset_overview.png`](images/01_dataset_overview.png) — overview of source tables/fields  
+- [`02_erd_relationships.png`](images/02_erd_relationships.png) — ERD relationships  
+- [`03_postgresql_staff_locations_view.png`](images/03_postgresql_staff_locations_view.png) — PostgreSQL: `staff_locations_view`  
+- [`04_postgresql_product_info_m_view.png`](images/04_postgresql_product_info_m_view.png) — PostgreSQL: `product_info_m_view` (materialized)  
+- [`05_mysql_staff_locations_table.png`](images/05_mysql_staff_locations_table.png) — MySQL: imported `staff_locations`  
+- [`06_mysql_product_info_table.png`](images/06_mysql_product_info_table.png) — MySQL: `product_info_m_view` CSV preview  
+- [`07_db2_load_success.png`](images/07_db2_load_success.png) — IBM Db2: successful **Load Data**  
+- [`08_db2_staff_locations_table.png`](images/08_db2_staff_locations_table.png) — IBM Db2: `STAFF_LOCATIONS` table
 
 ---
 
