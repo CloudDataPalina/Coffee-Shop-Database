@@ -185,7 +185,7 @@ The `data/` folder contains import-ready CSVs so anyone can quickly repeat the M
 
 ### 📜 License
 
-This project is released under the **MIT License** — see [`LICENSE`](../LICENSE).  
+This project is released under the **MIT License** — see [`LICENSE`](LICENSE).  
 
 ***Enjoy and have a great data brew*** ☕️🙂
 
