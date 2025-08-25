@@ -81,7 +81,6 @@ SELECT * FROM public.product_info_m_view  LIMIT 10;
 ### 4) Как получены data/*.csv
 - staff_locations_view.csv — результат SELECT из staff_locations_view.
 - product_info_m-view.csv — выгрузка из product_info_m_view (после REFRESH MATERIALIZED VIEW).
-Идея: хранить в data/ готовые к импорту CSV, чтобы любой мог быстро повторить шаги для MySQL/Db2.
 
 ### 5) Навигация по скриншотам
 - 01_dataset_overview.png — исходные таблицы/поля.
