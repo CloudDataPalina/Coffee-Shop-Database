@@ -125,7 +125,7 @@ Validation screenshots:
   [`output/mysql_staff_locations.sql`](../output/mysql_staff_locations.sql).
 
 Screenshots:
-[`05_mysql_staff_locations_table.png`](../images/05_mysql_staff_locations_table.png) •
+[`05_mysql_staff_locations_table.png`](images/05_mysql_staff_locations_table.png) •
 [`06_mysql_product_info_table.png`](../images/06_mysql_product_info_table.png)
 
 **IBM Db2 on Cloud 🟦**
