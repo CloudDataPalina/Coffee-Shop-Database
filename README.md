@@ -88,6 +88,7 @@ Coffee-Shop-Database/
 │ ├── views.sql                                ← staff_locations_view + product_info_m_view
 │ └── demo_queries.sql                         ← 3–5 sample SELECTs
 │
+├── run_all.sh                                 ← one-command bootstrap/run script
 ├── LICENSE
 └── README.md                                  ← this file (EN)
 ```
