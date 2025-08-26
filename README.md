@@ -1,4 +1,4 @@
-# ☕️ Coffee Shop Database — Documentation (EN)
+# ☕️ Coffee Shop Database 
 
 Welcome! This is a mini-project showcasing relational modeling and cross-DB integrations:  
 **ERD → DDL → data → views → CSV exports → import into MySQL and IBM Db2.**
@@ -20,17 +20,7 @@ git pull
 chmod +x run_all.sh
 ./run_all.sh
 ```
-Need a clean start?
 
-```bash
-./run_all.sh --reset
-```
-
-Quick peek:
-
-```bash
-docker exec -i coffee_pg psql -U cafe -d coffee_shop -c "SELECT * FROM staff_locations_view LIMIT 5;"
-```
 ---
 
 ## 🎯 Project Goal
