@@ -1,4 +1,3 @@
-cat > run_all.sh <<'SH'
 #!/usr/bin/env bash
 # run_all.sh — one-command bootstrap for the project
 # 1) Start PostgreSQL container (coffee_pg) with trust auth (no password)
@@ -76,7 +75,5 @@ docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -c \
 echo "6) Objects summary:"
 docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -c "\dt"
 docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -c "\dv"
-SH
 
-chmod +x run_all.sh
 
