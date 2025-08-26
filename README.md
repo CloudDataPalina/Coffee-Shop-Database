@@ -61,7 +61,7 @@ Coffee-Shop-Database/
 ├── images/
 │ ├── 01_dataset_overview.png                  ← source tables/data overview
 │ ├── 02_erd_relationships.png                 ← ERD: relationships (sales_detail↔sales_transaction,
-                                                                      product↔product_type)
+│                                                                      product↔product_type)
 │ ├── 03_postgresql_staff_locations_view.png   ← staff_locations_view in pgAdmin
 │ ├── 04_postgresql_product_info_m_view.png    ← materialized view in pgAdmin
 │ ├── 05_mysql_staff_locations_table.png       ← table after CSV import in MySQL
