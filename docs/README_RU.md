@@ -65,6 +65,7 @@ Coffee-Shop-Database/
 │   ├── views.sql                                ← staff_locations_view + product_info_m_view
 │   └── demo_queries.sql                         ← 3–5 показательных SELECT’ов
 │
+├── run_all.sh                                   ← скрипт инициализации и запуска одной командой
 ├── LICENSE
 └── README.md                                    ← краткое описание (EN)
 
