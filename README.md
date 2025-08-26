@@ -11,6 +11,27 @@ Welcome! This is a mini-project showcasing relational modeling and cross-DB inte
 - 🧪 Sample analytical queries: [`src/demo_queries.sql`](src/demo_queries.sql)
 
 ---
+## 🚀 One-command run (GitHub Codespaces)
+
+No local setup, no passwords — Docker runs inside Codespaces.
+
+```bash
+git pull
+chmod +x run_all.sh
+./run_all.sh
+```
+Need a clean start?
+
+```bash
+./run_all.sh --reset
+```
+
+Quick peek:
+
+```bash
+docker exec -i coffee_pg psql -U cafe -d coffee_shop -c "SELECT * FROM staff_locations_view LIMIT 5;"
+```
+---
 
 ## 🎯 Project Goal
 
