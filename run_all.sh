@@ -1,10 +1,28 @@
 cat > run_all.sh <<'SH'
 #!/usr/bin/env bash
+# run_all.sh — one-command bootstrap for the project
+# 1) Start PostgreSQL container (coffee_pg) with trust auth (no password)
+# 2) Wait until DB is ready
+# 3) Run SQL: src/GeneratedScript.sql -> src/CoffeeData.sql -> src/views.sql
+# 4) Refresh materialized view product_info_m_view (if present)
+# 5) Run demo queries (src/demo_queries.sql) if present
+# 6) Export CSVs to data/: staff_locations_view.csv, product_info_m-view.csv
+# Option: --reset  (recreate container from scratch)
+
 set -euo pipefail
 
 DB_USER="cafe"
 DB_NAME="coffee_shop"
 CONTAINER="coffee_pg"
+
+# optional flags
+if [[ "${1-}" == "--reset" ]]; then
+  docker rm -f "$CONTAINER" adminer 2>/dev/null || true
+fi
+
+# sanity checks
+command -v docker >/dev/null 2>&1 || { echo "Docker is required but not found."; exit 1; }
+mkdir -p data
 
 echo "1) Start PostgreSQL in Docker (passwordless trust auth)…"
 if ! docker ps -a --format '{{.Names}}' | grep -qx "$CONTAINER"; then
