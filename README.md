@@ -20,6 +20,13 @@ git pull
 chmod +x run_all.sh
 ./run_all.sh
 ```
+Clean start (optional): recreate the container from scratch
+
+```bash
+./run_all.sh --reset
+# manual equivalent: docker rm -f coffee_pg && ./run_all.sh
+
+```
 
 ---
 
