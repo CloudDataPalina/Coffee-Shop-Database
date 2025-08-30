@@ -58,16 +58,6 @@ Outcome: a portfolio-ready repository that anyone can use to spin up the schema,
 
 ---
 
-## 📦 Contents (quick)
-
-- Schema & data: [`src/GeneratedScript.sql`](src/GeneratedScript.sql), [`src/CoffeeData.sql`](src/CoffeeData.sql)  
-- Views: [`src/views.sql`](src/views.sql)  
-- CSV exports: [`data/`](data)  
-- MySQL/Db2 artifacts: [`output/mysql_staff_locations.sql`](output/mysql_staff_locations.sql), [`output/db2_staff_locations_ddl.sql`](output/db2_staff_locations_ddl.sql)  
-- Pipeline screenshots: [`images/`](images)
-
----
-
 ## Repository Structure
 
 ```
