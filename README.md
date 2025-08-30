@@ -67,7 +67,7 @@ Outcome: a portfolio-ready repository that anyone can use to spin up the schema,
 Coffee-Shop-Database/
 ├── data/
 │ ├── staff_locations_view.csv                 ← CSV from a view for external systems (MySQL/Db2)
-│ └── product_info_m-view.csv                  ← CSV from materialized view for marketing
+│ └── product_info_m_view.csv                  ← CSV from materialized view for marketing
 │
 ├── docs/
 │ └── README_RU.md                             ← Russian documentation (this project’s RU version)
