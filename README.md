@@ -31,6 +31,16 @@ Clean start (optional): recreate the container from scratch
 # manual equivalent: docker rm -f coffee_pg && ./run_all.sh
 
 ```
+---
+
+## 🧰 Skills & Tools
+- **PostgreSQL 16** — tables, PK/FK, views, and a materialized view  
+- **SQL (DDL/DML, PL/pgSQL)** — schema, demo data load, `REFRESH MATERIALIZED VIEW`  
+- **CSV / COPY** — exporting views for integrations  
+- **psql & pgAdmin 4** — administration, ERD (model built in pgAdmin)  
+- **GitHub Codespaces** — reproducible run with no local setup  
+- **MySQL** — CSV import (phpMyAdmin/CLI)  
+- **IBM Db2 on Cloud** — Load Data import, optional DDL
 
 ---
 
