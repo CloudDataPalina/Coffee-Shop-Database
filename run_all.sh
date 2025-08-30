@@ -1,4 +1,3 @@
-cat > run_all.sh <<'SH'
 #!/usr/bin/env bash
 # run_all.sh — one-command bootstrap for the project
 # 1) Start PostgreSQL container (coffee_pg) with trust auth (no password)
@@ -6,7 +5,7 @@ cat > run_all.sh <<'SH'
 # 3) Run SQL: src/GeneratedScript.sql -> src/CoffeeData.sql -> src/views.sql
 # 4) Refresh materialized view product_info_m_view (if present)
 # 5) Optionally run demo queries (src/demo_queries.sql)
-# 6) Export CSVs to data/: staff_locations_view.csv, product_info_m-view.csv
+# 6) Export CSVs to data/: staff_locations_view.csv, product_info_m_view.csv
 # Option: --reset  (recreate the container from scratch)
 
 set -euo pipefail
@@ -40,11 +39,9 @@ fi
 echo "   Waiting for database to become ready…"
 docker exec "$CONTAINER" bash -lc '
   set -e
-  # 1) wait until the instance is listening
   until pg_isready -U "$POSTGRES_USER" -d "$POSTGRES_DB" >/dev/null 2>&1; do
     sleep 0.5
   done
-  # 2) and also until it answers a simple query (handles first-run restart)
   until psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Atqc "SELECT 1" >/dev/null 2>&1; do
     sleep 0.5
   done
@@ -90,12 +87,10 @@ docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -Atq -c \
 
 docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -Atq -c \
   "COPY (SELECT * FROM product_info_m_view) TO STDOUT WITH CSV HEADER" \
-  > data/product_info_m-view.csv 2>/dev/null || echo "   product_info_m_view not found — skip"
+  > data/product_info_m_view.csv 2>/dev/null || echo "   product_info_m_view not found — skip"
 
 # --- summary ---------------------------------------------------------------
 echo "6) Objects summary:"
 docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -q -c "\dt"
 docker exec -i "$CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -q -c "\dv"
-SH
 
-chmod +x run_all.sh
