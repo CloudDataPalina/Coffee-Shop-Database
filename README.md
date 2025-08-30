@@ -1,4 +1,7 @@
 # ☕️ Coffee Shop Database 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white)
+![Codespaces Ready](https://img.shields.io/badge/Codespaces-ready-brightgreen?logo=github)
 ![status](https://img.shields.io/badge/status-passed-brightgreen)
 
 ### ✅ Project Status
