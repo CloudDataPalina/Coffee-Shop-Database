@@ -170,7 +170,7 @@ Screenshots:
 ### 💾 4) How `data/*.csv` were produced
 
 - [`staff_locations_view.csv`](data/staff_locations_view.csv) — `SELECT` from `staff_locations_view`.
-- [`product_info_m-view.csv`](data/product_info_m-view.csv) — export from `product_info_m_view`
+- [`product_info_m_view.csv`](data/product_info_m_view.csv) — export from `product_info_m_view`
   *(after `REFRESH MATERIALIZED VIEW`)*.
 
 The `data/` folder contains import-ready CSVs so anyone can quickly repeat the MySQL/Db2 steps.
