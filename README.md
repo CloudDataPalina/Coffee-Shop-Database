@@ -9,7 +9,7 @@ Welcome! This is a mini-project showcasing relational modeling and cross-DB inte
 
 **What’s inside the repository:**
 - 🗺️ ERD & database schema: [`src/GeneratedScript.sql`](src/GeneratedScript.sql)
-- 🐘 PostgreSQL demo data & views (incl. MView): [`src/CoffeeData.sql`](src/CoffeeData.sql), [`src/views.sql`](src/views.sql)
+- 🐘 PostgreSQL demo data & views (incl. a materialized view): [`src/CoffeeData.sql`](src/CoffeeData.sql), [`src/views.sql`](src/views.sql)
 - 🔁 CSV exports for external systems: [`data/`](data)
 - 🐬 MySQL & 🟦 Db2 imports (with screenshots): [`images/`](images)
 - 🧪 Sample analytical queries: [`src/demo_queries.sql`](src/demo_queries.sql)
@@ -71,8 +71,7 @@ Coffee-Shop-Database/
 │
 ├── images/
 │ ├── 01_dataset_overview.png                  ← source tables/data overview
-│ ├── 02_erd_relationships.png                 ← ERD: relationships (sales_detail↔sales_transaction,
-│                                                                      product↔product_type)
+│ ├── 02_erd_relationships.png                 ← ERD: relationships (sales_detail↔sales_transaction, product↔product_type)
 │ ├── 03_postgresql_staff_locations_view.png   ← staff_locations_view in pgAdmin
 │ ├── 04_postgresql_product_info_m_view.png    ← materialized view in pgAdmin
 │ ├── 05_mysql_staff_locations_table.png       ← table after CSV import in MySQL
@@ -123,7 +122,7 @@ Validation screenshots:
 2. Apply DDL: [`src/GeneratedScript.sql`](src/GeneratedScript.sql) — creates tables & FKs.  
 3. Load data: [`src/CoffeeData.sql`](src/CoffeeData.sql).  
 4. Create views: [`src/views.sql`](src/views.sql).  
-   If `product_info_m_view` was created with `WITH NO DATA`, run:
+   If `product_info_m_view` was created `WITH NO DATA`, run:
 
    ```sql
    REFRESH MATERIALIZED VIEW public.product_info_m_view;
