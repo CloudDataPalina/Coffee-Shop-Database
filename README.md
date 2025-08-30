@@ -39,7 +39,7 @@ Clean start (optional): recreate the container from scratch
 ## 🧰 Skills & Tools
 - **PostgreSQL 16** — tables, PK/FK, views, and a materialized view  
 - **SQL (DDL/DML, PL/pgSQL)** — schema, demo data load, `REFRESH MATERIALIZED VIEW`  
-- **CSV / COPY** — exporting views for integrations  
+- **CSV exports (COPY)** — exporting views for integrations  
 - **psql & pgAdmin 4** — administration, ERD (model built in pgAdmin)  
 - **GitHub Codespaces** — reproducible run with no local setup  
 - **MySQL** — CSV import (phpMyAdmin/CLI)  
