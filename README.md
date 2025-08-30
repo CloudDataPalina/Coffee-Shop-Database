@@ -1,4 +1,8 @@
 # ☕️ Coffee Shop Database 
+![status](https://img.shields.io/badge/status-passed-brightgreen)
+
+### ✅ Project Status
+This project is **functionally complete and tested**, but **open for future improvements and enhancements**.
 
 Welcome! This is a mini-project showcasing relational modeling and cross-DB integrations:  
 **ERD → DDL → data → views → CSV exports → import into MySQL and IBM Db2.**
